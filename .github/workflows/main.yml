@@ -27,8 +27,6 @@ jobs:
 
     - name: Build the app
       run: |
-        # You can add a build step here if you are using a build tool (like Webpack)
-        # For a simple HTML app, this step is optional
         echo "No build process needed for simple HTML app"
 
     - name: Deploy to GitHub Pages
@@ -36,3 +34,5 @@ jobs:
       with:
         branch: gh-pages
         folder: ./
+        token: ${{ secrets.GITHUB_TOKEN }}
+        force: true
